@@ -6,10 +6,26 @@ What if your computer restarts and you lose that blog from 2004 on a personal we
 
 Perhaps you want to share a resource with a colleague that you were using a few weeks ago and you don't want to grep your search history.
 
-<code>open-project-tabs</code> is a small node.js util package that simplifies the issue with keeping a bunch of tabs associated with a repo/project.
+<code>open-project-tabs</code> is a small node.js util package that simplifies the issue of keeping a bunch of tabs associated with a repo/project.
 
 # Installation and Usage
 
-You can install the package by running <code>npm i @binarytreereversal/open-project-tabs</code>
+You can install the package by running
 
-Then you can save your tabs in a file named <code>tabs.txt</code>.
+<code>npm i @binarytreereversal/open-project-tabs</code>
+
+Then you can save your tabs in a file named <code>tabs.txt</code>. I have included a sample file to make things as simple as possible, but you may use a .txt file stored pretty much anywhere.
+
+You can automate this process by referencing the exported method,
+
+<code>openTabs()</code> or
+
+<code>openTabs(relativeFilePathToTabsTxtFile)</code>
+
+that takes an optional parameter for the relative filepath to the .txt file containing the urls to open.
+
+In general, though, you will most likely want to run the script from the command line via
+
+<code>node openTabs.js</code>, once again with the optional parameter, <code>filePath</code>
+
+<code>node openTabs.js --filePath="relativeFilePathToTabsTxtFile"</code>
