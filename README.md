@@ -29,3 +29,15 @@ In general, though, you will most likely want to run the script from the command
 <code>node openTabs.js</code>, once again with the optional parameter, <code>filePath</code>
 
 <code>node openTabs.js --filePath="relativeFilePathToTabsTxtFile"</code>
+
+# Tabs.txt File
+
+The tabs file can be named anything and located anywhere reachable from the directory where you will run the script.
+
+Important Note: The tabs.txt file should include newlines after each url such as the following
+
+URL1
+
+URL2
+
+URL3
