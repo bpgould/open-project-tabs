@@ -14,7 +14,7 @@ You can install the package by running
 
 <code>npm i @binarytreereversal/open-project-tabs</code>
 
-Then you can save your tabs in a file named <code>tabs.txt</code>. I have included a sample file to make things as simple as possible, but you may use a .txt file stored pretty much anywhere.
+Then you can save your tabs in a file named <code>tabs.txt</code>. You may use a .txt file stored pretty much anywhere.
 
 You can automate this process by referencing the exported method,
 
