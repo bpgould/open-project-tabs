@@ -41,8 +41,10 @@ async function openTabsDefaultBrowser(tabsFilePath = "./tabs.txt") {
   });
 }
 
-exports.openTabs = function () {
-  argv.filePath
-    ? openTabsDefaultBrowser(argv.filePath)
-    : openTabsDefaultBrowser();
+argv.filePath
+  ? openTabsDefaultBrowser(argv.filePath)
+  : openTabsDefaultBrowser();
+
+exports.openTabs = function (filePath) {
+  filePath ? openTabsDefaultBrowser(filePath) : openTabsDefaultBrowser();
 };
