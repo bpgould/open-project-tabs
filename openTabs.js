@@ -45,6 +45,8 @@ argv.filePath
   ? openTabsDefaultBrowser(argv.filePath)
   : openTabsDefaultBrowser();
 
-exports.openTabs = function (filePath) {
-  filePath ? openTabsDefaultBrowser(filePath) : openTabsDefaultBrowser();
+exports.openTabs = function (passedFilePath) {
+  passedFilePath
+    ? openTabsDefaultBrowser(passedFilePath)
+    : openTabsDefaultBrowser();
 };

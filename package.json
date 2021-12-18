@@ -1,6 +1,6 @@
 {
   "name": "@binarytreereversal/open-project-tabs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Keep your research tabs versioned with your project and open all of them in your default browser with a single command.",
   "main": "openTabs.js",
   "scripts": {
