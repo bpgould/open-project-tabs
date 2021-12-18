@@ -1,0 +1,28 @@
+{
+  "name": "@binarytreereversal/open-project-tabs",
+  "version": "1.0.0",
+  "description": "Keep your research tabs versioned with your project and open all of them in your default browser with a single command.",
+  "main": "openTabs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpgould/open-project-tabs.git"
+  },
+  "keywords": [
+    "chrome",
+    "tabs",
+    "utility"
+  ],
+  "author": "Bennett Gould",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bpgould/open-project-tabs/issues"
+  },
+  "homepage": "https://github.com/bpgould/open-project-tabs#readme",
+  "dependencies": {
+    "open": "^8.4.0",
+    "yargs": "^17.3.0"
+  }
+}
