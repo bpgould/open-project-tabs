@@ -34,7 +34,7 @@ function loadUrlsIntoArray(tabsFilePath) {
   });
 }
 
-async function openTabsDefaultBrowser(tabsFilePath = "./tabs.txt") {
+async function openTabsDefaultBrowser(tabsFilePath = "tabs.txt") {
   const result = await loadUrlsIntoArray(tabsFilePath);
   tabsArray.map((tab) => {
     openTab(tab);
@@ -44,9 +44,3 @@ async function openTabsDefaultBrowser(tabsFilePath = "./tabs.txt") {
 argv.filePath
   ? openTabsDefaultBrowser(argv.filePath)
   : openTabsDefaultBrowser();
-
-exports.openTabs = function (passedFilePath) {
-  passedFilePath
-    ? openTabsDefaultBrowser(passedFilePath)
-    : openTabsDefaultBrowser();
-};

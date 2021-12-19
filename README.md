@@ -2,31 +2,33 @@
 
 What's better than having 34 Stack Overflow tabs open trying to fix some arcane bug? Calling it a night and saving 34 tabs to your desktop or in a junked up bookmarks folder in Chrome.
 
-What if your computer restarts and you lose that blog from 2004 on a personal website that actually had the solution?
+Perhaps you want to share a resource with a colleague that you were using a few weeks ago and you don't want to grep your search history?
 
-Perhaps you want to share a resource with a colleague that you were using a few weeks ago and you don't want to grep your search history.
+<code>open-project-tabs</code> is a small node.js util script that simplifies the issue of keeping a bunch of tabs associated with a repo/project.
 
-<code>open-project-tabs</code> is a small node.js util package that simplifies the issue of keeping a bunch of tabs associated with a repo/project.
+# Installation and Setup
 
-# Installation and Usage
+You can install the npm module by running
 
-You can install the package by running
+<code>npm i --save-dev @binarytreereversal/open-project-tabs</code>
 
-<code>npm i @binarytreereversal/open-project-tabs</code>
+next, run the setup file
 
-Then you can save your tabs in a file named <code>tabs.txt</code>. You may use a .txt file stored pretty much anywhere.
+<code>node node_modules/@binarytreereversal/open-project-tabs/setup.js</code>
 
-You can automate this process by referencing the exported method,
+This will copy two files to your root directory (<code>openTabs.js</code> and <code>tabs.txt</code>).
 
-<code>openTabs()</code> or
+Then you can save your urls in <code>tabs.txt</code>. You may use a .txt file stored pretty much anywhere, but you will have to pass the <code>filePath</code> argument when running the script if you choose to save <code>tabs.txt</code> somewhere other than the root directory.
 
-<code>openTabs(relativeFilePathToTabsTxtFile)</code>
+# Usage
 
-that takes an optional parameter for the relative filepath to the .txt file containing the urls to open.
+Simply run
 
-In general, though, you will most likely want to run the script from the command line via
+<code>node openTabs.js</code>
 
-<code>node openTabs.js</code>, once again with the optional parameter, <code>filePath</code>
+to open all of the URLs in <code>tabs.txt</code>
+
+or with the optional parameter, <code>filePath</code>:
 
 <code>node openTabs.js --filePath="relativeFilePathToTabsTxtFile"</code>
 
@@ -34,4 +36,4 @@ In general, though, you will most likely want to run the script from the command
 
 The tabs file can be named anything and located anywhere reachable from the directory where you will run the script.
 
-Important Note: The tabs.txt file should include newlines after each url
+Important Note: The tabs.txt file should include newlines after each url.
