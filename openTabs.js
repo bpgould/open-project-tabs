@@ -1,17 +1,11 @@
-const process = require("process");
 const readline = require("readline");
 const fs = require("fs");
-const os = require("os");
 const open = require("open");
 const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
 
 const tabsArray = [];
-
-const argv =
-  os.platform() === "darwin"
-    ? yargs(hideBin(process.argv)).argv
-    : yargs(process.argv);
+const argv = yargs(hideBin(process.argv)).argv;
 
 async function openTab(url) {
   result = await open(url);
